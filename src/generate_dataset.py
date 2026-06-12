@@ -46,12 +46,15 @@ mock_score   = np.clip(mock_score, 1.0, 9.0)
 
 # --- Target: Final IELTS Band (weighted combination + small noise) ---
 final_band = (
-    0.25 * reading
-    + 0.20 * writing
-    + 0.25 * listening
-    + 0.15 * speaking
+    0.22 * reading
+    + 0.17 * writing
+    + 0.22 * listening
+    + 0.13 * speaking
     + 0.10 * mock_score
     + 0.05 * (vocabulary / 100 * 8 + 1)
+    + 0.04 * (grammar / 100 * 8 + 1)
+    + 0.04 * (attendance / 100 * 8 + 1)
+    + 0.03 * (practice_hrs / 10 * 8 + 1)
 )
 final_band = np.round(final_band + np.random.normal(0, 0.15, N_STUDENTS), 1)
 final_band = np.clip(final_band, 1.0, 9.0)

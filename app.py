@@ -108,6 +108,6 @@ if st.button("Predict My IELTS Band", use_container_width=True, type="primary"):
 # ── Footer ────────────────────────────────────────────────────────────────────
 st.divider()
 st.caption(
-    "Model: Linear Regression · RMSE 0.160 · R² 0.983 · "
+    "Model: Linear Regression · RMSE 0.158 · R² 0.981 · "
     "Trained on 4,000 synthetic student records"
 )

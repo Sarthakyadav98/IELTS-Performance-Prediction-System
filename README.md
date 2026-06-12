@@ -6,11 +6,11 @@ Predicts a student's IELTS band score using assessment records and behavioural l
 
 | Model | RMSE | MAE | R2 | CV RMSE (5-fold) |
 |---|---|---|---|---|
-| **Linear Regression** | **0.1595** | **0.1292** | **0.9828** | **0.1515** |
-| XGBoost | 0.1651 | 0.1344 | 0.9815 | 0.1612 |
-| Random Forest | 0.1706 | 0.1370 | 0.9803 | 0.1670 |
+| **Linear Regression** | **0.1582** | **0.1281** | **0.9813** | **0.1526** |
+| XGBoost | 0.1636 | 0.1337 | 0.9800 | 0.1629 |
+| Random Forest | 0.1689 | 0.1369 | 0.9786 | 0.1689 |
 
-> Best model: Linear Regression (RMSE 0.160, R2 0.983 on held-out test set)
+> Best model: Linear Regression (RMSE 0.158, R2 0.981 on held-out test set)
 
 ## Tech Stack
 
@@ -78,6 +78,7 @@ streamlit run app.py
 
 ## Key Findings
 
-- **Linear Regression** achieved the best performance: RMSE 0.160, R2 0.983
+- **Linear Regression** achieved the best performance: RMSE 0.158, R2 0.981
 - **Reading Score**, **Listening Score**, and **Mock Test Score** are the strongest predictors
-- 5-fold cross-validation confirmed strong generalisation (CV RMSE 0.152) with low variance across folds
+- **Attendance, Practice Hours, and Grammar** contribute meaningfully to the final band score
+- 5-fold cross-validation confirmed strong generalisation (CV RMSE 0.153) with low variance across folds
